@@ -92,7 +92,7 @@ public abstract class Creature
      * Gets the health value of the creatures
      * @return getHp()
      */
-    public int getHp()
+    public int getHealth()
     {
         return hp;
     }
