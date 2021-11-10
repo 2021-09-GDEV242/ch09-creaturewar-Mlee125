@@ -85,7 +85,15 @@ public abstract class Creature
      * @param damage value to remove from hit point count
      */
     public void takeDamage(int damage) {
-        // TODO: implement this
+        hp = hp - damage;
     }
     
+    /**
+     * Gets the health value of the creatures
+     * @return getHp()
+     */
+    public int getHp()
+    {
+        return hp;
+    }
 }
