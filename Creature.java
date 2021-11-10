@@ -7,8 +7,8 @@
  * the creature is alive or knocked out. The creature is also responsible for calculating
  * damage delivered based on the creature's strength (1 to str) 
  * 
- * @author Crosbie
- * @version 2020-10 v1.0
+ * @author Matthew Lee
+ * @version 11.9.2021
  */
 // we will learn what the abstract keyword does in a later chapter
 public abstract class Creature
@@ -59,8 +59,11 @@ public abstract class Creature
      * @return true when current hit point level is greater than zero
      */
     public boolean isAlive() {
-        // TODO: implement a method to report if the creature yet lives
-        return false; //change this
+        boolean isAlive = false;
+        if( hp > 0) {
+            isAlive = true;
+        }
+        return isAlive; 
     }
     
     /**
@@ -68,8 +71,11 @@ public abstract class Creature
      * @return true when current hit point level is less than or equal to zero
      */
     public boolean isKnockedOut() {
-        //TODO: implement a method to report if the creature has been killed
-        return false; //change this
+        boolean isKnockedOut = false;
+        if(!isAlive()) {
+            isKnockedOut = true;
+        }
+        return isKnockedOut; 
     }
     
     

@@ -5,8 +5,8 @@
  * Implements a maximum/minimum strength for the creature type [20/5]
  * Implements a maximum/minimum hitpoint total for the creature type [25/5]
  * 
- * @author Bill Crosbie
- * @version 2020-10 v1.0
+ * @author Matthew Lee
+ * @version 11.9.2021
  */
 public class Human extends Creature
 {
