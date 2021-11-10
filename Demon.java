@@ -2,9 +2,6 @@
 /**
  * The Demon class
  * Is a type of creature that isn't created directly 
- * Implements a maximum/minimum strength for the creature type [18/5]
- * Implements a maximum/minimum hitpoint total for the creature type [30/10]
- * 
  * @author Matthew Lee
  * @version 11.9.2021
  */
