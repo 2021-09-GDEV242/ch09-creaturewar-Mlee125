@@ -37,7 +37,9 @@ public abstract class Creature
      * @param hp the health of the creature at the start of the simulation, and the current health levels during battle
      */
     public Creature (int str, int hp) {
-       //implement this
+       this.str = str;
+       this.hp = hp;
+       this.max_hp = hp;
     }
     
     
@@ -46,8 +48,9 @@ public abstract class Creature
      * @return a value between 1 and str to be used to cause damage to another creature
      */
     public int attack(){
-        // TODO: implement a damage method
-        return 0;
+        int dmg;
+        dmg = Randomizer.nextInt(str);
+        return dmg;
     }
     
     
