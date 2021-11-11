@@ -51,7 +51,7 @@ public class BattleSimulation
      * ArmyOne will contain a large amount of humans and elfs
      * @return soldier
      */
-    public Creature addArmyOne()
+    private Creature addArmyOne()
     {
         Creature soldier;
         if(Randomizer.nextInt(10) <=6) {
@@ -70,7 +70,7 @@ public class BattleSimulation
      * ArmyTwo will contain a large amount of humans,cyberdemons and balrogs
      * @return soldier
      */
-    public Creature addArmyTwo()
+    private Creature addArmyTwo()
     {
         Creature soldier;
         if(Randomizer.nextInt(25) <= 18) {
