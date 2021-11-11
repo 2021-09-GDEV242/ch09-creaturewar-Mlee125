@@ -6,10 +6,11 @@
  * Implements a maximum/minimum hitpoint total for the creature type [100/25]
  * 
  * @author Matthew Lee
- * @version 11.9.2021
+ * @version 11.11.2021
  */
 public class CyberDemon extends Demon
 {
+    // instance variables
     private static final int MAX_CYBERDEMON_HP = 100;
     private static final int MIN_CYBERDEMON_HP = 25;
     private static final int MAX_CYBERDEMON_STR = 40;

@@ -4,7 +4,7 @@ import java.util.ArrayList;
  * Pits two large armies against each other to see who will win!!!
  *
  * @author Matthew Lee
- * @version 11.9.2021
+ * @version 11.11.2021
  */
 public class BattleSimulation
 {
@@ -17,8 +17,10 @@ public class BattleSimulation
     private int armyTwoSize;
     private int armyTwoIndex = 0;
     // Adds the min and max size for each army
+    // Army one has a set size of 100 soldier
     private int armyOneMaxSize = 100;
     private int armyOneMinSize = 100;
+    // Army two has a set max size of 50 and a set min size of 30
     private int armyTwoMaxSize = 50;
     private int armyTwoMinSize = 30;
     // Initializes the boolean of the fighting method
@@ -35,7 +37,7 @@ public class BattleSimulation
         // Creates the size of each army
         armyOneSize = Randomizer.nextInt((armyOneMaxSize - armyOneMinSize) + armyOneMinSize);
         armyTwoSize = Randomizer.nextInt((armyTwoMaxSize - armyTwoMinSize) + armyTwoMinSize);
-        
+        // Adds each soldier to their given army
         for(int i = 0; i < armyOneSize; i++) {
             armyOne.add(addArmyOne());
         }
@@ -90,6 +92,7 @@ public class BattleSimulation
     
     /**
      * The fight method which creates a loop until one army wins 
+     * Prints out a after action report with data of the size of each army array list
      */
     private void fight()
     {

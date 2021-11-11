@@ -5,10 +5,11 @@
  * Implements a maximum/minimum hitpoint total for the creature type [25/8]
  * 
  * @author Matthew Lee
- * @version 11.9.2021
+ * @version 11.11.2021
  */
 public class Elf extends Creature
 {
+    // instance variables
     private static final int MAX_ELF_HP = 25;
     private static final int MIN_ELF_HP = 8;
     private static final int MAX_ELF_STR = 18;

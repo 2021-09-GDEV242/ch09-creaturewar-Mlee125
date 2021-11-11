@@ -6,10 +6,11 @@
  * Implements a maximum/minimum hitpoint total for the creature type [200/80]
  * 
  * @author Matthew Lee
- * @version 11.9.2021
+ * @version 11.11.2021
  */
 public class Balrog extends Demon
 {
+    // instance variables
     private static final int MAX_BALROG_HP = 200;
     private static final int MIN_BALROG_HP = 80;
     private static final int MAX_BALROG_STR = 100;
