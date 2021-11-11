@@ -96,7 +96,7 @@ public class BattleSimulation
         while(fighting && armyOne.get(0).isAlive() && armyTwo.get(0).isAlive()) {
             armyOne.get(0).takeDamage(armyTwo.get(0).attack());
             armyTwo.get(0).takeDamage(armyOne.get(0).attack());
-        }
+        
         // if a soldier is knocked out remove them from the array list
         if(armyOne.get(0).isKnockedOut()) {
             armyOne.remove(0);
@@ -106,13 +106,18 @@ public class BattleSimulation
         }
         // If any of the armies soldier count gets to 0 or less
         // return fight as false and end the battle simulation and declares a winner
-        if(armyOne.size() <=0) {
+        if(armyOne.size() <= 0) {
             fighting = false;
             System.out.println("The humans and elfs have been DEFEATED!!!");
         }
-        if(armyTwo.size() <=0) {
+        if(armyTwo.size() <= 0) {
             fighting = false;
             System.out.println("The humans, Cyberdemons and the massive balrogs have been DEFEATED!!!");
         }
+    }
+    // Prints out that an army has won
+    // Also prints out the size of each army array to show how close the battle was
+        System.out.println("A army was declared a winner!!! \nArmy One soldier count: " + armyOne.size() + " " +
+        "Army two soldier count: " + armyTwo.size());
     }
 }
