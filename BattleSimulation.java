@@ -21,6 +21,8 @@ public class BattleSimulation
     private int armyOneMinSize = 100;
     private int armyTwoMaxSize = 50;
     private int armyTwoMinSize = 30;
+    // Initializes the boolean of the fighting method
+    private boolean fighting;
 
     /**
      * Constructor for objects of class BattleSimulation
@@ -40,8 +42,8 @@ public class BattleSimulation
         for(int i = 0; i < armyTwoSize; i++) {
             armyTwo.add(addArmyTwo());
         }
-        // Haven't added the fight method yet
-        // fight();
+        fighting = true;
+        fight();
     }
 
     /**
@@ -84,5 +86,33 @@ public class BattleSimulation
             soldier = new Balrog();
         }
         return soldier;
+    }
+    
+    /**
+     * The fight method which creates a loop until one army wins 
+     */
+    private void fight()
+    {
+        while(fighting && armyOne.get(0).isAlive() && armyTwo.get(0).isAlive()) {
+            armyOne.get(0).takeDamage(armyTwo.get(0).attack());
+            armyTwo.get(0).takeDamage(armyOne.get(0).attack());
+        }
+        // if a soldier is knocked out remove them from the array list
+        if(armyOne.get(0).isKnockedOut()) {
+            armyOne.remove(0);
+        }
+        if(armyTwo.get(0).isKnockedOut()) {
+            armyTwo.remove(0);
+        }
+        // If any of the armies soldier count gets to 0 or less
+        // return fight as false and end the battle simulation and declares a winner
+        if(armyOne.size() <=0) {
+            fighting = false;
+            System.out.println("The humans and elfs have been DEFEATED!!!");
+        }
+        if(armyTwo.size() <=0) {
+            fighting = false;
+            System.out.println("The humans, Cyberdemons and the massive balrogs have been DEFEATED!!!");
+        }
     }
 }
